@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Vaccination Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post" th:action="@{/all}">
+    <h1>Vaccination Details</h1>
+        <label for="id">ID:</label>
+        <input id="id" name="id_details">
+
+        <label for="id_type">ID Type:</label>
+        <select id="id_type" name="id_type" required>
+            <option value="Aadhaar">Aadhaar</option>
+            <option value="Passport">Passport</option>
+            <option value="Driver License">Driver License</option>
+            <option value="Voter ID">Voter ID</option>
+            <option value="Other">Other</option>
+        </select>
+
+
+        <label for="name">Name:</label>
+        <input id="name" name="names"   pattern="[A-Za-z ]+"  required>
+
+        <label for="contact_number">Contact Number:</label>
+        <input id="contact_number" name="contact__numbers" pattern="[0-9]{10}" 
+        title="Please enter a 10-digit contact number (e.g., 9876543210)" required>
+
+        <label for="vaccine_name">Vaccine Name:</label>
+        <select id="vaccine_name" name="vaccine_names" required>
+            <option value="Covaxin">Covaxin</option>
+            <option value="Covishield">Covishield</option>
+            <option value="Sputnik">Sputnik</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

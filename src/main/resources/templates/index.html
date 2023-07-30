@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Vaccination Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand font-monospace m-lg-2 bg-dark" href="/Welcome">Register</a>
+        <!-- <p class=" bg-dark"
+            style="color: white; margin-left: 30%; font-weight: 600; font-style: oblique; margin-top: 5px; font-size: large;">
+            Vaccination Table Details </p> -->
+    </nav>
+    <h1>Vaccination Records</h1>
+    <table class="table mt-1">
+        <thead>
+            <tr class="bg-info">
+                <th scope="col">ID_Details</th>
+                <th scope="col">Name</th>
+                <th scope="col">contact_Number</th>
+                <th scope="col">vaccine_Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="t: ${data}">
+                <th scope m,="row" th:text="${t.id_details}"></th>
+                <td th:text="${t.names}"></td>
+                <td th:text="${t.contact__numbers}"></td>
+                <td th:text="${t.vaccine_names}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
