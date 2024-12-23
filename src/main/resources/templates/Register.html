@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -74,13 +74,11 @@
             <option value="Other">Other</option>
         </select>
 
-
         <label for="name">Name:</label>
-        <input id="name" name="names"   pattern="[A-Za-z ]+"  required>
+        <input id="name" name="names" pattern="[A-Za-z ]+" required>
 
         <label for="contact_number">Contact Number:</label>
-        <input id="contact_number" name="contact__numbers" pattern="[0-9]{10}" 
-        title="Please enter a 10-digit contact number (e.g., 9876543210)" required>
+        <input id="contact_number" name="contact__numbers" pattern="[0-9]{10}" title="Please enter a 10-digit contact number (e.g., 9876543210)" required>
 
         <label for="vaccine_name">Vaccine Name:</label>
         <select id="vaccine_name" name="vaccine_names" required>

@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 import com.vaccination.vaccinate.Model.Modeluser;
 import com.vaccination.vaccinate.Serivce.Userservice;
-
 @Controller
 public class Usercontrol {
 
@@ -23,23 +23,18 @@ public class Usercontrol {
     public String home(Model mod) {
         List<Modeluser> use = server.findAll();
         mod.addAttribute("data", use);
-        return "index";
+        return "index";  // Home page
     }
 
     @GetMapping("/Welcome")
-    public String wel(@ModelAttribute Modeluser user, Model model) {// bind karke bean ko dena
-        return "Register";
-    }
-
-    @RequestMapping("")
-    public String index(Model mod) {
-        return "index";
+    public String showRegisterPage(@ModelAttribute Modeluser user, Model model) {
+        return "register";  // Register page
     }
 
     @PostMapping("/all")
     public String add(@ModelAttribute Modeluser user, Model mod) {
         server.Add(user);
-        return "redirect:/";
+        return "redirect:/";  // Redirect to home after successful registration
     }
 
 }
