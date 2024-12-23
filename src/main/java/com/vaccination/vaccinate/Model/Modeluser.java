@@ -15,10 +15,9 @@ public class Modeluser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     private int id_details;
     private String names;
-    private int contact__numbers;
+    private long contact__numbers;
     private String vaccine_names;
 
     public Modeluser() {
@@ -40,11 +39,11 @@ public class Modeluser {
         this.names = names;
     }
 
-    public int getContact__numbers() {
+    public long getContact__numbers() {
         return contact__numbers;
     }
 
-    public void setContact__numbers(int contact__numbers) {
+    public void setContact__numbers(long contact__numbers) {
         this.contact__numbers = contact__numbers;
     }
 

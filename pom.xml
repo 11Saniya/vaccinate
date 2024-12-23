@@ -112,6 +112,12 @@
 			</scope>
 		</dependency>
 	</dependencies>
+	<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <version>8.0.40</version>
+</dependency>
+
 	<build>
 		<plugins>
 			<plugin>
