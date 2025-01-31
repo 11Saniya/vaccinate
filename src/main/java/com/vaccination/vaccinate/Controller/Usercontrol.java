@@ -27,7 +27,7 @@ public class Usercontrol {
         return "index";  // Home page
     }
 
-    @GetMapping("/Welcome")
+    @GetMapping("/welcome")
     public String showRegisterPage(@ModelAttribute Modeluser user, Model model) {
         return "register";  // Register page
     }
