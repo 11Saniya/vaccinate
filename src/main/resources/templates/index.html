@@ -50,6 +50,7 @@
 </head>
 
 <body>
+    <form action="#" method="post" th:action="@{/vaccination/all}">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand font-monospace m-lg-2 bg-dark" href="/Welcome">Register</a>
@@ -71,7 +72,7 @@
             <tr th:each="t: ${data}">
                 <th scope m,="row" th:text="${t.id_details}"></th>
                 <td th:text="${t.names}"></td>
-                <td th:text="${t.contact__numbers}"></td>
+                <td th:text="${t.contact_numbers}"></td>
                 <td th:text="${t.vaccine_names}"></td>
             </tr>
         </tbody>

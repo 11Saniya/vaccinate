@@ -17,7 +17,7 @@ public class Modeluser {
     private int id;
     private int id_details;
     private String names;
-    private long contact__numbers;
+    private long contact_numbers;
     private String vaccine_names;
 
     public Modeluser() {
@@ -39,12 +39,12 @@ public class Modeluser {
         this.names = names;
     }
 
-    public long getContact__numbers() {
-        return contact__numbers;
+    public long getContact_numbers() {
+        return contact_numbers;
     }
 
-    public void setContact__numbers(long contact__numbers) {
-        this.contact__numbers = contact__numbers;
+    public void setContact_numbers(long contact_numbers) {
+        this.contact_numbers = contact_numbers;
     }
 
     public String getVaccine_names() {
@@ -65,8 +65,8 @@ public class Modeluser {
 
     @Override
     public String toString() {
-        return "Modeluser [id=" + id + ", id_details=" + id_details + ", names=" + names + ", contact__numbers="
-                + contact__numbers + ", vaccine_names=" + vaccine_names + "]";
+        return "Modeluser [id=" + id + ", id_details=" + id_details + ", names=" + names + ", contact_numbers="
+                + contact_numbers + ", vaccine_names=" + vaccine_names + "]";
     }
 
 }

@@ -18,6 +18,7 @@ public class Usercontrol {
 
     @Autowired
     Userservice server;
+    
 
     @GetMapping("/")
     public String home(Model mod) {
@@ -31,7 +32,7 @@ public class Usercontrol {
         return "register";  // Register page
     }
 
-    @PostMapping("/all")
+    @PostMapping("/vaccination/all")
     public String add(@ModelAttribute Modeluser user, Model mod) {
         server.Add(user);
         return "redirect:/";  // Redirect to home after successful registration
