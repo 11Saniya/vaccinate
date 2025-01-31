@@ -8,8 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 
 import com.vaccination.vaccinate.Model.Modeluser;
 import com.vaccination.vaccinate.Serivce.Userservice;
@@ -27,7 +25,7 @@ public class Usercontrol {
         return "index";  // Home page
     }
 
-    @GetMapping("/welcome")
+    @GetMapping("/Welcome")
     public String showRegisterPage(@ModelAttribute Modeluser user, Model model) {
         return "register";  // Register page
     }
